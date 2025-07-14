@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& n) {
+        int j=0;
+        for(int i=1;i<n.size();i++){
+            if(n[j]!=n[i])
+            n[++j]=n[i];
+        }
+    return j+1;
+    }
+};

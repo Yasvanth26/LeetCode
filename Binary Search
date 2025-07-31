@@ -1,0 +1,28 @@
+class Solution {
+public:
+    int search(vector<int>& nums, int t) {
+        int n=nums.size();
+        int a=n/2;
+        int j=-1;
+        if(nums.front()==t)
+        return 0;
+        else if(nums.back()==t)
+        return n-1;
+        else if(nums.at(a)==t)
+        return  a;
+        else if(nums.at(a)>t){
+        for(int i=1;i<a;i++)
+        {
+            if(nums.at(i)==t)
+            return i;
+        }}
+        else
+        {for(int i=a+1;i<n-1;i++)
+        {
+            if(nums.at(i)==t)
+            return i;
+        }} 
+
+    return -1;
+    }
+};
